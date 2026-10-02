@@ -1,0 +1,30 @@
+spec_version: "0.1.0"
+name: soc-incident-responder
+version: 1.0.0
+description: Automated siem alert correlation, incident timeline reconstruction, and soar containment execution.
+author: "Rucha Salpure"
+license: MIT
+model:
+  preferred: claude-opus-4-6
+  fallback:
+    - claude-sonnet-4-5-20250929
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+skills:
+  - soar-playbook-execution
+tools: []
+delegation:
+  mode: auto
+runtime:
+  max_turns: 50
+  timeout: 300
+compliance:
+  risk_tier: standard
+  frameworks: []
+tags:
+  - security
+  - autonomous-agent
+  - opengap-verified
+metadata:
+  repository: "https://github.com/Rucha0901/soc-incident-responder"
